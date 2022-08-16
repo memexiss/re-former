@@ -1,0 +1,16 @@
+<h1>Editing user</h1>
+
+<%= form_with model: @user do |form| %>
+  <%= form.label "Username Here:" %>
+  <%= form.text_field :username %>
+  <%= form.label :email %>
+  <%= form.email_field :email %>
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+  <%= form.submit "Edit User" %>
+<% end %>
+
+<div>
+  <%= link_to "Show this user", @user %> |
+  <%= link_to "Back to users", users_path %>
+</div>
